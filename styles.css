@@ -1,0 +1,38 @@
+body {
+  font-size: 24px;
+  font-family: Helvetica, sans-serif;
+}
+
+.gameBoard {
+  background-color: green;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.card {
+  height: 8rem;
+  width: 5rem;
+  background-color: #fff;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+}
+
+.cover.covered {
+  background-color: red;
+}
+
+.cover.matched {
+  border-color: blue;
+}
