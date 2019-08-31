@@ -40,7 +40,7 @@ function onCoverClick (e) {
         selectedCards.forEach(c => c.classList.add('covered'))
         selectedCards = []
         clickable = true
-      }, 2000)
+      }, 1000)
     }
   }
 

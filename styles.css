@@ -4,20 +4,27 @@ body {
 }
 
 .gameBoard {
-  background-color: green;
+  background-color: #214517;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  justify-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .card {
   height: 8rem;
-  width: 5rem;
+  width: 6rem;
   background-color: #fff;
   margin: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  border-radius: .5rem;
 }
 
 .cover {
@@ -26,13 +33,20 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border: 2px solid transparent;
+  border: 2px solid #f1ebec;
+  border-radius: .5rem;
 }
 
 .cover.covered {
-  background-color: red;
+  background-color: #c62f2d;
 }
 
 .cover.matched {
   border-color: blue;
+}
+
+html, body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
