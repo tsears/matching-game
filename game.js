@@ -31,9 +31,12 @@ function onCoverClick (e) {
 
   if (selectedCards.length === 2) {
     if (cardsMatch()) {
-      console.log('match')
       selectedCards.forEach(c => c.classList.add('matched'))
       selectedCards = []
+
+      if (document.querySelectorAll('.matched').length === 16) {
+        document.getElementById('youWin').classList.remove('hidden')
+      }
     } else {
       clickable = false
       window.setTimeout(() => {
