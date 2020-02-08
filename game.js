@@ -31,7 +31,10 @@ function onCoverClick (e) {
 
   if (selectedCards.length === 2) {
     if (cardsMatch()) {
-      selectedCards.forEach(c => c.classList.add('matched'))
+      selectedCards.forEach(c => {
+        c.classList.add('matched')
+        c.removeEventListener('click', onCoverClick)
+      })
       selectedCards = []
 
       // game state in DOM? game state in DOM.
