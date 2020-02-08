@@ -34,6 +34,7 @@ function onCoverClick (e) {
       selectedCards.forEach(c => c.classList.add('matched'))
       selectedCards = []
 
+      // game state in DOM? game state in DOM.
       if (document.querySelectorAll('.matched').length === 16) {
         document.getElementById('youWin').classList.remove('hidden')
       }
@@ -57,8 +58,6 @@ function createGame () {
     1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8
   ])
 
-  console.log(cards)
-
   cards.forEach(cardValue => {
     const card = document.createElement('div')
     const valueContainer = document.createElement('div')
@@ -81,3 +80,4 @@ function createGame () {
 }
 
 window.addEventListener('DOMContentLoaded', createGame)
+window.oncontextmenu = () => false
